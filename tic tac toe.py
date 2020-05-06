@@ -12,7 +12,7 @@ winners=((0,1,2),(3,4,5),(6,7,8),(0,3,6),(1,4,7),(2,5,8),(0,4,8),(2,4,6))
 tab=range(1,10)
  
  
-# Function to print the board
+
 def print_board():
     x=1
     counter = 0
@@ -27,19 +27,19 @@ def print_board():
         else :
             print("| ",end='')
  
-# This function will decide player will play with X or O
+
 def select_char():
     if random.randint(0,1) == 0:
         return ('X','O')
     return ('O','X')
  
-# Function to decide a valid move.
+
 def can_move(brd, player, move):
     if move in tab and brd[move-1] == move-1:
         return True
     return False
  
-# Function to check if win condition is satisfied.
+
 def can_win(brd, player, move):
     places=[]
     x=0
@@ -80,7 +80,8 @@ def random_move():
  
     return (False,False)
  
-# AI goes here
+
+
 def computer_move():
     move=-1
     # If the computer can win in this turn, it will take the turn.
